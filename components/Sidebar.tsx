@@ -1,11 +1,12 @@
 'use client';
 
-import { sidebarLinks } from '@/constants';
-import { cn } from '@/lib/utils';
-import Image from 'next/image';
 import Link from 'next/link';
+import Image from 'next/image';
 import { usePathname } from 'next/navigation';
-// import Footer from './Footer';
+
+import Footer from './Footer';
+import { cn } from '@/lib/utils';
+import { sidebarLinks } from '@/constants';
 // import PlaidLink from './PlaidLink';
 
 const Sidebar = ({ user }: SidebarProps) => {
@@ -55,7 +56,7 @@ const Sidebar = ({ user }: SidebarProps) => {
         {/* <PlaidLink user={user} /> */}
       </nav>
 
-      {/* <Footer user={user} /> */}
+      <Footer user={user} />
     </section>
   );
 };
