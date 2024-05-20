@@ -139,9 +139,9 @@ export const getInstitution = async ({
       country_codes: ['US'] as CountryCode[],
     });
 
-    const intitution = institutionResponse.data.institution;
+    const institution = institutionResponse.data.institution;
 
-    return parseStringify(intitution);
+    return parseStringify(institution);
   } catch (error) {
     console.error('An error occurred while getting the accounts:', error);
   }
