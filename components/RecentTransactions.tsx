@@ -1,10 +1,10 @@
 import Link from 'next/link';
 
 import BankInfo from './BankInfo';
-import { BankTabItem } from './BankTabItem';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-import TransactionsTable from './TransactionsTable';
 import { Pagination } from './Pagination';
+import { BankTabItem } from './BankTabItem';
+import TransactionsTable from './TransactionsTable';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 
 const RecentTransactions = ({
   accounts,
@@ -14,7 +14,6 @@ const RecentTransactions = ({
 }: RecentTransactionsProps) => {
   const rowsPerPage = 10;
   const totalPages = Math.ceil(transactions?.length / rowsPerPage);
-
   const indexOfLastTransaction = page * rowsPerPage;
   const indexOfFirstTransaction = indexOfLastTransaction - rowsPerPage;
   const currentTransactions = transactions?.slice(
@@ -33,7 +32,6 @@ const RecentTransactions = ({
           View All
         </Link>
       </header>
-
       <Tabs defaultValue={appwriteItemId} className="w-full">
         <TabsList className="recent-transactions-tablist">
           {accounts?.map((account: Account) => (
@@ -46,7 +44,6 @@ const RecentTransactions = ({
             </TabsTrigger>
           ))}
         </TabsList>
-
         {accounts?.map((account: Account) => (
           <TabsContent
             key={account.id}

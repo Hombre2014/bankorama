@@ -13,7 +13,6 @@ import {
 const BankInfo = ({ account, appwriteItemId, type }: BankInfoProps) => {
   const router = useRouter();
   const searchParams = useSearchParams();
-
   const isActive = appwriteItemId === account?.appwriteItemId;
 
   const handleBankChange = () => {
@@ -62,7 +61,6 @@ const BankInfo = ({ account, appwriteItemId, type }: BankInfoProps) => {
             </p>
           )}
         </div>
-
         <p className={`text-16 font-medium text-blue-700 ${colors.subText}`}>
           {formatAmount(account.currentBalance)}
         </p>

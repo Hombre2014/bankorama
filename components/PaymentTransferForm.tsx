@@ -124,7 +124,6 @@ const PaymentTransferForm = ({ accounts }: PaymentTransferFormProps) => {
             </FormItem>
           )}
         />
-
         <FormField
           control={form.control}
           name="name"
@@ -154,7 +153,6 @@ const PaymentTransferForm = ({ accounts }: PaymentTransferFormProps) => {
             </FormItem>
           )}
         />
-
         <div className="payment-transfer_form-details">
           <h2 className="text-18 font-semibold text-gray-900">
             Bank account details
@@ -163,7 +161,6 @@ const PaymentTransferForm = ({ accounts }: PaymentTransferFormProps) => {
             Enter the bank account details of the recipient
           </p>
         </div>
-
         <FormField
           control={form.control}
           name="email"
@@ -187,7 +184,6 @@ const PaymentTransferForm = ({ accounts }: PaymentTransferFormProps) => {
             </FormItem>
           )}
         />
-
         <FormField
           control={form.control}
           name="sharableId"
@@ -211,7 +207,6 @@ const PaymentTransferForm = ({ accounts }: PaymentTransferFormProps) => {
             </FormItem>
           )}
         />
-
         <FormField
           control={form.control}
           name="amount"
@@ -235,7 +230,6 @@ const PaymentTransferForm = ({ accounts }: PaymentTransferFormProps) => {
             </FormItem>
           )}
         />
-
         <div className="payment-transfer_btn-box">
           <Button type="submit" className="payment-transfer_btn">
             {isLoading ? (

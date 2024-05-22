@@ -10,6 +10,9 @@
 # testing
 /coverage
 
+# Sentry
+.sentryclirc
+
 # next.js
 /.next/
 /out/

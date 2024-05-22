@@ -26,7 +26,6 @@ const Copy = ({ title }: { title: string }) => {
       <p className="line-clamp-1 w-full max-w-full text-xs font-medium text-black-2">
         {title} test
       </p>
-
       {!hasCopied ? (
         <svg
           xmlns="http://www.w3.org/2000/svg"

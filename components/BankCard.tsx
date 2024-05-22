@@ -34,7 +34,6 @@ const BankCard = ({
             </p>
           </article>
         </div>
-
         <div className="bank-card_icon">
           <Image src="/icons/Paypass.svg" width={20} height={24} alt="pay" />
           <Image
@@ -45,7 +44,6 @@ const BankCard = ({
             className="ml-5"
           />
         </div>
-
         <Image
           src="/icons/lines.png"
           width={316}
@@ -54,7 +52,6 @@ const BankCard = ({
           className="absolute top-0 left-0"
         />
       </Link>
-
       {showBalance && <Copy title={account?.shareableId} />}
     </div>
   );

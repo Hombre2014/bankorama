@@ -20,7 +20,6 @@ const AuthForm = ({ type }: { type: string }) => {
   const router = useRouter();
   const [user, setUser] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
-
   const formSchema = authFormSchema(type);
 
   // 1. Define your form.
@@ -38,7 +37,6 @@ const AuthForm = ({ type }: { type: string }) => {
 
     try {
       // Sign up with Appwrite & create plaid token
-
       if (type === 'sign-up') {
         const userData = {
           firstName: data.firstName!,
@@ -54,7 +52,6 @@ const AuthForm = ({ type }: { type: string }) => {
         };
 
         const newUser = await signUp(userData);
-
         setUser(newUser);
       }
 
@@ -81,13 +78,12 @@ const AuthForm = ({ type }: { type: string }) => {
             src="/icons/logo.svg"
             width={34}
             height={34}
-            alt="Horizon logo"
+            alt="Bankorama logo"
           />
           <h1 className="text-26 font-ibm-plex-serif font-bold text-black-1">
-            Horizon
+            Bankorama
           </h1>
         </Link>
-
         <div className="flex flex-col gap-1 md:gap-3">
           <h1 className="text-24 lg:text-36 font-semibold text-gray-900">
             {user ? 'Link Account' : type === 'sign-in' ? 'Sign In' : 'Sign Up'}
@@ -173,7 +169,6 @@ const AuthForm = ({ type }: { type: string }) => {
                   </div>
                 </>
               )}
-
               <CustomInput
                 id="email"
                 control={form.control}
@@ -181,7 +176,6 @@ const AuthForm = ({ type }: { type: string }) => {
                 label="Email"
                 placeholder="Enter your email"
               />
-
               <CustomInput
                 id="password"
                 control={form.control}
@@ -189,7 +183,6 @@ const AuthForm = ({ type }: { type: string }) => {
                 label="Password"
                 placeholder="Enter your password"
               />
-
               <div className="flex flex-col gap-4">
                 <Button type="submit" disabled={isLoading} className="form-btn">
                   {isLoading ? (
@@ -206,7 +199,6 @@ const AuthForm = ({ type }: { type: string }) => {
               </div>
             </form>
           </Form>
-
           <footer className="flex justify-center gap-1">
             <p className="text-14 font-normal text-gray-600">
               {type === 'sign-in'

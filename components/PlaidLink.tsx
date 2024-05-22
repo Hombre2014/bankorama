@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import { useRouter } from 'next/navigation';
 import React, { useCallback, useEffect, useState } from 'react';
 import {
@@ -11,20 +12,16 @@ import {
   createLinkToken,
   exchangePublicToken,
 } from '@/lib/actions/user.actions';
-import Image from 'next/image';
 
 const PlaidLink = ({ user, variant }: PlaidLinkProps) => {
   const router = useRouter();
-
   const [token, setToken] = useState('');
 
   useEffect(() => {
     const getLinkToken = async () => {
       const data = await createLinkToken(user);
-
       setToken(data?.linkToken);
     };
-
     getLinkToken();
   }, [user]);
 
@@ -34,7 +31,6 @@ const PlaidLink = ({ user, variant }: PlaidLinkProps) => {
         publicToken: public_token,
         user,
       });
-
       router.push('/');
     },
     [user, router]

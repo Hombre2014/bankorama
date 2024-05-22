@@ -2,16 +2,17 @@
 
 import Link from 'next/link';
 import Image from 'next/image';
+import { usePathname } from 'next/navigation';
+
+import Footer from './Footer';
 import { cn } from '@/lib/utils';
 import { sidebarLinks } from '@/constants';
-import { usePathname } from 'next/navigation';
 import {
   Sheet,
   SheetClose,
   SheetContent,
   SheetTrigger,
 } from '@/components/ui/sheet';
-import Footer from './Footer';
 
 const MobileNav = ({ user }: MobileNavProps) => {
   const pathname = usePathname();
@@ -37,7 +38,7 @@ const MobileNav = ({ user }: MobileNavProps) => {
               src="/icons/logo.svg"
               width={34}
               height={34}
-              alt="Horizon logo"
+              alt="Bankorama logo"
             />
             <h1 className="text-26 font-ibm-plex-serif font-bold text-black-1">
               Bankorama

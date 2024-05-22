@@ -1,8 +1,8 @@
 /* eslint-disable no-prototype-builtins */
-import { type ClassValue, clsx } from 'clsx';
+import { z } from 'zod';
 import qs from 'query-string';
 import { twMerge } from 'tailwind-merge';
-import { z } from 'zod';
+import { type ClassValue, clsx } from 'clsx';
 
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));

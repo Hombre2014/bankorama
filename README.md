@@ -7,12 +7,12 @@
 - Major languages: TypeScript
 - Backend: Appwrite
 - Framework: Next.js
-- Tools used: Plaid
+- Tools used: Plaid, Dwolla, Sentry
 - Styling: TailwindCSS, shadcn/ui
 
 ## Screenshots
 
-![Home]()
+![Home](/public/home.jpg)
 
 ## Live Link
 

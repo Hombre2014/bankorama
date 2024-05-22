@@ -47,7 +47,6 @@ const TransactionsTable = ({ transactions }: TransactionTableProps) => {
         {transactions.map((t: Transaction) => {
           const status = getTransactionStatus(new Date(t.date));
           const amount = formatAmount(t.amount);
-
           const isDebit = t.type === 'debit';
           const isCredit = t.type === 'credit';
 
@@ -65,7 +64,6 @@ const TransactionsTable = ({ transactions }: TransactionTableProps) => {
                   </h1>
                 </div>
               </TableCell>
-
               <TableCell
                 className={`pl-2 pr-10 font-semibold ${
                   isDebit || amount[0] === '-'
@@ -75,19 +73,15 @@ const TransactionsTable = ({ transactions }: TransactionTableProps) => {
               >
                 {isDebit ? `-${amount}` : isCredit ? amount : amount}
               </TableCell>
-
               <TableCell className="pl-2 pr-10">
                 <CategoryBadge category={status} />
               </TableCell>
-
               <TableCell className="min-w-32 pl-2 pr-10">
                 {formatDateTime(new Date(t.date)).dateTime}
               </TableCell>
-
               <TableCell className="pl-2 pr-10 capitalize min-w-24">
                 {t.paymentChannel}
               </TableCell>
-
               <TableCell className="pl-2 pr-10 max-md:hidden">
                 <CategoryBadge category={t.category} />
               </TableCell>
