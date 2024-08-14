@@ -36,7 +36,7 @@ Deploy your project with [Vercel](https://vercel.com/)
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/Hombre/tiktik_app/issues).
+Feel free to check the [issues page](https://github.com/Hombre2014/bankorama/issues).
 
 ## Show your support
 
